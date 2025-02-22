@@ -19,7 +19,7 @@ Season's Cafe is a full-featured system built using Django. It provides an onlin
 ## 🔧 Installation & Setup
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-username/seasons-cafe.git
+   git clone https://github.com/sajibuddin729/seasons-cafe.git
    cd seasons-cafe
    ```
 2. **Create and activate a virtual environment:**
