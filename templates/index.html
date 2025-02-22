@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Season's Cafe - Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section position-relative" style="background-image: url('{% static 'images/bg.jpg' %}'); height: 600px; background-size: cover; background-position: center;">
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
+    <div class="container h-100 d-flex flex-column justify-content-center text-white position-relative">
+        <div class="col-lg-6 col-md-8">
+            <h1 class="display-4 fw-bold">Welcome to Season's Cafe</h1>
+            <p class="lead my-4">Where every season brings a new culinary adventure. Experience the freshest ingredients prepared with passion and creativity.</p>
+            <div class="d-flex flex-wrap gap-3">
+                <a href="{% url 'menu' %}" class="btn btn-primary btn-lg">View Menu</a>
+                <a href="{% url 'reservation' %}" class="btn btn-outline-light btn-lg">Reserve a Table</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- About Our Cafe -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center gy-5">
+            <div class="col-lg-6 order-lg-1 order-2 ">
+                <h2 class="mb-4">About Our Cafe</h2>
+                <p class="lead">Season's Cafe was established in 2024 with a simple vision: to bring the best of seasonal ingredients to our community through thoughtfully prepared dishes.</p>
+                <p>Our chefs work closely with local farmers to source the freshest ingredients each season offers, ensuring that every meal tells a story of tradition, innovation, and sustainability.</p>
+                <a href="{% url 'about' %}" class="btn btn-outline-dark mt-3">Learn More</a>
+            </div>
+            <div class="col-lg-6 order-lg-2 order-1">
+                <img src="{% static 'images/cfe.jpg' %}" alt="Cafe Interior" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Customer Testimonials -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">What Our Customers Say</h2>
+        <div class="row g-0">  <!-- g-0 removes gaps between columns -->
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="card-text flex-grow-1">"The seasonal menu is always a delight! I love how they transform local ingredients into amazing culinary creations."</p>
+                        <p class="fw-bold mb-0">- Namun Nahar</p>
+                    </div>
+                </div>   
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="card-text flex-grow-1">"Here i eat every day. In season's cafe's foods er delicious."</p>
+                        <p class="fw-bold mb-0">- Masum Billah.</p>
+                    </div>
+                </div>   
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="card-text flex-grow-1">"I tryied every food here. There food is so attractive and they are alwyes clean "</p>
+                        <p class="fw-bold mb-0">- Moaz</p>
+                    </div>
+                </div>   
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

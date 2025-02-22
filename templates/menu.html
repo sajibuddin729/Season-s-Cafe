@@ -1,0 +1,212 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="text-center mb-5">Our Menu</h1>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- Item 1 -->
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images/momo.jpg' %}" class="card-img-top" alt="Spring Salad">
+                <div class="card-body">
+                    <h5 class="card-title">Momo</h5>
+                    <p class="card-text">Steamed dumpling made from wheat dough flat and stuffed with minced meats, vegetables, spices, and herbs usually served with chutneys/pickles/sauces</p>
+                    <p class="card-text"><strong>৳ 60</strong></p>
+                    <form method="POST" action="{% url 'add_to_cart' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="menu_item_id" value="1">
+                        <div class="d-flex align-items-center">
+                            <input type="number" name="quantity" class="form-control me-2" value="1" min="1" max="10" style="width: 70px">
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images/burger.jpg' %}" class="card-img-top" alt="Burger">
+                <div class="card-body">
+                    <h5 class="card-title">Burger</h5>
+                    <p class="card-text">Chicken patty served on a hamburger bun with similar condiments and toppings as found on hamburgers</p>
+                    <p class="card-text"><strong>৳ 60</strong></p>
+                    <form method="POST" action="{% url 'add_to_cart' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="menu_item_id" value="2">
+                        <div class="d-flex align-items-center">
+                            <input type="number" name="quantity" class="form-control me-2" value="1" min="1" max="10" style="width: 70px">
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images/subsenduc.jpg' %}" class="card-img-top" alt="Sub Sandwich">
+                <div class="card-body">
+                    <h5 class="card-title">Sub Sandwich</h5>
+                    <p class="card-text">Dish typically consisting variously of meat, cheese, sauces, and vegetables used as a filling between slices of bread, or placed atop a slice of bread</p>
+                    <p class="card-text"><strong>80 tk</strong></p>
+                    <form method="POST" action="{% url 'add_to_cart' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="menu_item_id" value="3">
+                        <div class="d-flex align-items-center">
+                            <input type="number" name="quantity" class="form-control me-2" value="1" min="1" max="10" style="width: 70px">
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images/metbox.jpg' %}" class="card-img-top" alt="Meat Box">
+                <div class="card-body">
+                    <h5 class="card-title">Meat Box</h5>
+                    <p class="card-text">A box of meat that can be used for special occasions or to stock your freezer</p>
+                    <p class="card-text"><strong>100 tk</strong></p>
+                    <form method="POST" action="{% url 'add_to_cart' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="menu_item_id" value="4">
+                        <div class="d-flex align-items-center">
+                            <input type="number" name="quantity" class="form-control me-2" value="1" min="1" max="10" style="width: 70px">
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images/lacci.jpg' %}" class="card-img-top" alt="Lacci">
+                <div class="card-body">
+                    <h5 class="card-title">Lacci</h5>
+                    <p class="card-text">Blending yogurt, water, and spices</p>
+                    <p class="card-text"><strong>50 tk</strong></p>
+                    <form method="POST" action="{% url 'add_to_cart' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="menu_item_id" value="5">
+                        <div class="d-flex align-items-center">
+                            <input type="number" name="quantity" class="form-control me-2" value="1" min="1" max="10" style="width: 70px">
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images/banannaMilk.jpg' %}" class="card-img-top" alt="Banana Shake">
+                <div class="card-body">
+                    <h5 class="card-title">Banana Milk Shake</h5>
+                    <p class="card-text">Sweetened drink made by blending ripe bananas, milk, ice cream, flavorings, and a sweetener</p>
+                    <p class="card-text"><strong>50 tk</strong></p>
+                    <form method="POST" action="{% url 'add_to_cart' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="menu_item_id" value="6">
+                        <div class="d-flex align-items-center">
+                            <input type="number" name="quantity" class="form-control me-2" value="1" min="1" max="10" style="width: 70px">
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images/mint.jpg' %}" class="card-img-top" alt="Mint lemonade">
+                <div class="card-body">
+                    <h5 class="card-title">Mint lemonade</h5>
+                    <p class="card-text">Lemonade that's flavored with mint</p>
+                    <p class="card-text"><strong>40 tk</strong></p>
+                    <form method="POST" action="{% url 'add_to_cart' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="menu_item_id" value="7">
+                        <div class="d-flex align-items-center">
+                            <input type="number" name="quantity" class="form-control me-2" value="1" min="1" max="10" style="width: 70px">
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images/pacta.jpg' %}" class="card-img-top" alt="Pasta">
+                <div class="card-body">
+                    <h5 class="card-title">Pasta</h5>
+                    <p class="card-text">Food made from flour and water that is formed into different shapes and cooked</p>
+                    <p class="card-text"><strong>40 tk</strong></p>
+                    <form method="POST" action="{% url 'add_to_cart' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="menu_item_id" value="8">
+                        <div class="d-flex align-items-center">
+                            <input type="number" name="quantity" class="form-control me-2" value="1" min="1" max="10" style="width: 70px">
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+                <!-- Item 9: Cold Coffee -->
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images/cold.jpg' %}" class="card-img-top" alt="Cold Coffee">
+                <div class="card-body">
+                    <h5 class="card-title">Cold Coffee</h5>
+                    <p class="card-text">Chilled beverage made with coffee, typically combined with milk or cream, sweetener, and served over ice</p>
+                    <p class="card-text"><strong>50 tk</strong></p>
+                    <form method="POST" action="{% url 'add_to_cart' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="menu_item_id" value="9">
+                        <div class="d-flex align-items-center">
+                            <input type="number" name="quantity" class="form-control me-2" value="1" min="1" max="10" style="width: 70px">
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 10: French Fries -->
+        <div class="col">
+            <div class="card h-100">
+                <img src="{% static 'images/ramadan.jpg' %}" class="card-img-top" alt="French Fries">
+                <div class="card-body">
+                    <h5 class="card-title">Special Pletter</h5>
+                    <p class="card-text">Deep-fried potato strips, crispy on the outside and fluffy on the inside, often served with ketchup or other dips</p>
+                    <p class="card-text"><strong>139 tk</strong></p>
+                    <form method="POST" action="{% url 'add_to_cart' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="menu_item_id" value="10">
+                        <div class="d-flex align-items-center">
+                            <input type="number" name="quantity" class="form-control me-2" value="1" min="1" max="10" style="width: 70px">
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}

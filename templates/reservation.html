@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container ">
+    <p class="text-center">Book a table and enjoy your meal at Season's Cafe</p>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label">Full Name</label>
+                    {{ form.name }}
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    {{ form.email }}
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Phone Number</label>
+                    {{ form.phone }}
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Reservation Date</label>
+                    {{ form.date }}
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Reservation Time</label>
+                    {{ form.time }}
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Number of Guests</label>
+                    {{ form.guests }}
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Special Requests</label>
+                    {{ form.special_requests }}
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Reserve Now</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

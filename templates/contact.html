@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .partner-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: block;
+        }
+    </style>
+    <div class="container py-5">
+        <h1 class="text-center mb-5">Contact Us</h1>
+        
+        <!-- Partner Cards -->
+        <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+            <!-- Partner 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <img src="{% static 'images/sjib.jpg' %}" alt="Sajib" class="partner-img">
+                        <h5 class="card-title">Md. Sajib Uddin</h5>
+                        <h6 class="card-subtitle mb-3 text-muted"> Owner </h6>
+                        <p class="card-text text-start">
+                            <i class="fas fa-envelope me-2"></i> sajibuddin729@gmail.com <br>
+                            <i class="fas fa-phone me-2"></i> +880 1521771457<br>
+                            <i class="fas fa-location-dot me-2"></i> 406 no Room, Salam Hall,NSTU
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Partner 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <img src="{% static 'images/oitijjo.jpg' %}" alt="Jane Smith" class="partner-img">
+                        <h5 class="card-title">Al Afnan Khan </h5>
+                        <h6 class="card-subtitle mb-3 text-muted"> Owner </h6>
+                        <p class="card-text text-start">
+                            <i class="fas fa-envelope me-2"></i> afnankhan2018afnan@gmail.com <br>
+                            <i class="fas fa-phone me-2"></i> +880 1568760678 <br>
+                            <i class="fas fa-location-dot me-2"></i> Housing State, Maijdi, Noakhali
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="text-center">
+            <h2 class="mb-4">Connect With Us</h2>
+            <div class="d-flex justify-content-center gap-4">
+                <a href="https://www.facebook.com/profile.php?id=61566374379227" class="text-decoration-none">
+                    <i class="fab fa-facebook fa-2x text-primary"></i>
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <i class="fab fa-twitter fa-2x text-info"></i>
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <i class="fab fa-linkedin fa-2x text-primary"></i>
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <i class="fab fa-instagram fa-2x text-danger"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="row mt-5">
+            <div class="col-md-8 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4">Send Us a Message</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock content %}
+
